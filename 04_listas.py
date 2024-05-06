@@ -25,6 +25,8 @@ print(my_other_list.count("Guerrero Torta")) # Count cuenta el número de ocurre
 # print(my_other_list[4])  # IndexError
 # print(my_other_list[-5]) # IndexError
 
+print(my_other_list.index("Joan Lluís")) # Devuelve el índice de la primera vez que aparece el parámetro en la lista.
+
 age, height, name, surname = my_other_list # Desempaqueta TODOS elementos en variables.
 print(name)
 
@@ -74,3 +76,4 @@ my_list = [35, 50, 24, 62, 53, 30, 17]
 my_list.sort() # Ordena lis valores de la lista (No sirve para float ni str)
 print(my_list)
 
+print(my_list[1:3]) # Sublista
