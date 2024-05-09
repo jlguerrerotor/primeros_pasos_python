@@ -46,4 +46,4 @@ print(my_new_set.difference(my_set)) # Calcula la diferencia entre 2 conjuntos
 
 print(my_new_set.intersection(my_set)) # Calcula los elementos en común entre los 2 conjuntos
 
-print(my_set.issubset(my_new_set)) # Calcula si un conjunto es un subconjunto de otro.
+print(my_set.issubset(my_new_set)) # Calcula si un conjunto es un subconjunto de otro. 
