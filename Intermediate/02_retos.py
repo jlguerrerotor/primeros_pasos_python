@@ -52,7 +52,7 @@ de Fibonacci empezando en 0.
 def fibonacci():
     prev = 0
     next = 1
-    for index in range(0,50): # ¿Se puede iterar el rango directamente sin usar un for?
+    for index in range(0,50):
         print(prev)
         fib = prev + next
         prev = next

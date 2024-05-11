@@ -23,3 +23,4 @@ def sum_five(number):
 
 my_list = [sum_five(i) for i in my_original_list]
 print(my_list) # [5, 6, 7, 8, 9, 10, 11, 12]
+
