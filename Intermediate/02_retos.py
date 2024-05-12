@@ -59,3 +59,24 @@ def fibonacci():
         next = fib
     
 fibonacci()
+
+'''
+Reto #4: ¿ES UN NÚMERO PRIMO?
+----------------------------------------
+Escribe un programa que se encargue de comprobar si un número es o no primo.
+Hecho esto, imprime los números primos entre 1 y 100.
+'''
+
+def is_prime(numero):
+    if numero < 2:
+        return False
+    for index in range(2, numero):
+        if numero % index == 0:
+            return False
+    return True
+
+for number in range(101):
+    result = is_prime(number)
+    if result:
+        print(f"Es primo {number}: {result}")
+
