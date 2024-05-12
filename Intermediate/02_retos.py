@@ -80,3 +80,19 @@ for number in range(101):
     if result:
         print(f"Es primo {number}: {result}")
 
+'''
+Reto #7: INVIRTIENDO CADENAS
+----------------------------------------
+Crea un programa que invierta el orden de una cadena de texto
+sin usar funciones propias del lenguaje que lo hagan de forma automática.
+- Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+'''
+
+def invertir(cadena):
+    cadena_invertida = ""
+    longitud = len(cadena)
+    for index in range(longitud):
+        cadena_invertida += cadena[longitud-index-1]
+    return cadena_invertida
+
+print(invertir("Hola mundo"))
