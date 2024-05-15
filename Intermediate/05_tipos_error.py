@@ -44,3 +44,6 @@ print(my_int)
 # ZeroDivisionError
 # print(5/0) # ZeroDivisionError: division by zero
 print(5/2)
+
+# FileNotFoundError
+# open("my_file.txt") # FileNotFoundError: [Errno 2] No such file or directory: 'my_file.txt'
