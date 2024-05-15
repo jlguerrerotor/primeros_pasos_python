@@ -30,3 +30,17 @@ print(my_other_dict["Edad"])
 # TypeError
 # print(my_list["Nombre"]) # TypeError: list indices must be integers or slices, not str
 print(my_list[1])
+
+# ImportError
+# from math import PI # ImportError: cannot import name 'PI' from 'math' (unknown location). Did you mean: 'pi'?
+from math import pi
+print(pi)
+
+# ValueError
+# my_int = int("10 Años") # ValueError: invalid literal for int() with base 10: '10 Años'
+my_int = int("10")
+print(my_int)
+
+# ZeroDivisionError
+# print(5/0) # ZeroDivisionError: division by zero
+print(5/2)
