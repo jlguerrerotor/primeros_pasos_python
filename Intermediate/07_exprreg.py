@@ -1,4 +1,5 @@
 ### Expresiones Regulares ###
+# https://regex101.com para aprender y validar expresiones regulares
 
 import re # Módulo que contiene las funcionalidades relacionadas con la expresiones regulares
 
@@ -54,3 +55,37 @@ sub = re.sub("Expresiones","expresiones", my_string) # Lección llamada expresio
 print(sub)
 sub2 = re.sub("[l|L]ección","LECCIÓN", sub)
 print(sub2)
+
+# Patrones
+
+pattern = r"[Ll]ección"
+print(re.findall(pattern, my_string)) # ['lección', 'Lección']
+
+pattern = r"[Ll]ección|Expresiones"
+print(re.findall(pattern, my_string)) # ['lección', 'Lección', 'Expresiones']
+
+pattern = r"[0-9]"
+print(re.findall(pattern, my_string)) # ['7']
+print(re.search(pattern, my_string)) # <re.Match object; span=(26, 27), match='7'>
+
+pattern = r"[\d]"
+print(re.findall(pattern, my_string)) # ['7']
+
+pattern = r"[\D]"
+print(re.findall(pattern, my_string)) # [Todas las letras menos las del pattern '7']
+
+pattern = r"[l]."
+print(re.findall(pattern, my_string)) # ['la', 'le', 'll', 'la']
+
+pattern = r"[l].*"
+print(re.findall(pattern, my_string)) # ['la lección número 7:', 'llamada Expresiones Regulares']
+
+# Validación de email con RegEx
+def is_valid_email(email):
+    pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$"
+    return re.match(pattern,email)
+
+print(is_valid_email(my_string)) # None
+print(is_valid_email("jlguerrerotor@gmail.com")) # <re.Match object; span=(0, 23), match='jlguerrerotor@gmail.com'>
+print(is_valid_email("jlguerrerotor@gmail")) # None
+print(is_valid_email("jlguerrerotor@gmail.com.es")) # <re.Match object; span=(0, 26), match='jlguerrerotor@gmail.com.es'>
