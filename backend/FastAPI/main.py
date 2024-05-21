@@ -17,5 +17,6 @@ async def root(): # Siempre que accedemos a un servidor la operación debe ser a
 async def url():
     return { "url_curso":"https://mouredev.com/python" } # Devuelve un JSON
 
-# Ejecutando la url http://127.0.0.1:8000/docs, nos genera automáticamente la documentación usando Swagger
-# Ejecutando la url http://127.0.0.1:8000/redoc, nos genera automáticamente la documentación usando Redoc
+# Ejecutando la url http://127.0.0.1:8000/docs en el navegador, nos genera automáticamente la documentación usando Swagger
+# Ejecutando la url http://127.0.0.1:8000/redoc en el navegador, nos genera automáticamente la documentación usando Redoc
+
