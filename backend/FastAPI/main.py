@@ -9,6 +9,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+# GET -> Obtener / Leer Datos
 @app.get("/") # Vamos a acceder a la raíz de un sitio
 async def root(): # Siempre que accedemos a un servidor la operación debe ser asíncrona ya que no sabemo cuanto va a tardar en responder.
     return "¡Hola FastAPI!" # Si llamamos a 127.0.0.1:8000, nos va a devolver este mensaje
@@ -18,5 +19,12 @@ async def url():
     return { "url_curso":"https://mouredev.com/python" } # Devuelve un JSON
 
 # Ejecutando la url http://127.0.0.1:8000/docs en el navegador, nos genera automáticamente la documentación usando Swagger
-# Ejecutando la url http://127.0.0.1:8000/redoc en el navegador, nos genera automáticamente la documentación usando Redoc
+# Ejecutando la url http://127.0.0.1:8000/redoc en el navegador, nos genera automáticamente la documentación usando Redocly
 
+# POST -> Crear Datos
+
+# PUT -> Actualizar Datos. Todo el registro entero
+
+# PATCH -> Actualizar un dato. Un campo de un registro
+
+# DELETE -> Borrar Datos
