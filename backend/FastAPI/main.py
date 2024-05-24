@@ -9,12 +9,14 @@ from fastapi import FastAPI
 # Un router permite que se puedan lanzar peticiones al servidor sobre 2 ficheros de objeto distintos.
 from routers.products import router as products_router
 from routers.users import router as users_router
+from fastapi.staticfiles import StaticFiles # Imágenes, PDFs
 
 app = FastAPI()
 
 # Routers
 app.include_router(products_router)
 app.include_router(users_router)
+app.mount("/static", StaticFiles(directory="static"), name="static") # http://127.0.0.1:8000/static/images/python.jpg muestra el fichero
 
 # GET -> Obtener / Leer Datos
 @app.get("/") # Vamos a acceder a la raíz de un sitio
