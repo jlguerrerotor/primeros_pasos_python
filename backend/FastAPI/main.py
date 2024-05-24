@@ -6,8 +6,12 @@
 
 
 from fastapi import FastAPI
+from routers import products
 
 app = FastAPI()
+
+# Routers
+app.include_router(products.router)
 
 # GET -> Obtener / Leer Datos
 @app.get("/") # Vamos a acceder a la raíz de un sitio
