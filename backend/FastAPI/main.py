@@ -6,12 +6,15 @@
 
 
 from fastapi import FastAPI
-from routers import products
+# Un router permite que se puedan lanzar peticiones al servidor sobre 2 ficheros de objeto distintos.
+from routers.products import router as products_router
+from routers.users import router as users_router
 
 app = FastAPI()
 
 # Routers
-app.include_router(products.router)
+app.include_router(products_router)
+app.include_router(users_router)
 
 # GET -> Obtener / Leer Datos
 @app.get("/") # Vamos a acceder a la raíz de un sitio
